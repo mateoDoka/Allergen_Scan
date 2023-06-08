@@ -66,14 +66,18 @@ EditText password, username;
 
             UserDatabase userDatabase= UserDatabase.getUserDatabase(getApplicationContext());
             final UserDao userDao =userDatabase.userDao();
-            List<UserTable> userTable= userDao.login(username.getText().toString(),password.getText().toString());
-           if(userTable==null){
+            UserTable user = userDao.login(username.getText().toString(), password.getText().toString());
+           if(user==null ){
                Toast.makeText(LoginPage.this, "User not found", Toast.LENGTH_SHORT).show();
 
            }  else {
                Intent intent= new Intent(LoginPage.this, MainActivity.class);
-               startActivity(intent);
 
+               profileFragment fragment = new profileFragment();
+               Bundle args = new Bundle();
+               args.putString("myExtra", "extraValue");
+               fragment.setArguments(args);
+               startActivity(intent);
            }
             return null;
         }

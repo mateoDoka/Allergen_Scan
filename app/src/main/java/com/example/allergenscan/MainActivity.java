@@ -17,12 +17,19 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import com.example.allergenscan.API_DOC.*;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton scanBtn;
@@ -95,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(MainActivity.this,DisplayProduct.class);
                             intent.putExtra("Response", jsonString);
                             startActivity(intent);
+
                         }
                          else {
                                 Toast.makeText(MainActivity.this, "No item found 222", Toast.LENGTH_SHORT).show();

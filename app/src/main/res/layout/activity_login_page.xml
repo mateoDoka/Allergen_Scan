@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background1"
     tools:context=".LoginPage">
 
     <TextView
@@ -66,7 +66,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/design_default_color_secondary"
+        android:backgroundTint="@color/purple_700"
         android:text="LOGIN" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Already Have an Account?"
+        android:text="Don't Have an Account?"
         android:textColor="@color/white" />
 
 

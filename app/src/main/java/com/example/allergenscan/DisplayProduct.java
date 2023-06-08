@@ -50,11 +50,8 @@ public class DisplayProduct extends AppCompatActivity {
                 String energyAmount = product.getJSONObject("nutriments").optString("energy");
                 String fatAmount = product.getJSONObject("nutriments").optString("fat");
                 String carbohydratesAmount = product.getJSONObject("nutriments").optString("carbohydrates");
-                String energyDailyValue = nutriments.optString("energy_daily_value");
-                String fatDailyAmount= nutriments.optString("fat_daily_value");
-                String carbohydratesDailyAmount=  product.getJSONObject("nutriments").optString("carbohydrates_daily_value");
 
-                // Add more nutrient fields as needed
+                // Ad more nutrient fields as needed
 
                 // Create a TableRow for each nutrient
                 addNutrientRow(tableLayout, "Energy", energyAmount );
@@ -77,12 +74,8 @@ public class DisplayProduct extends AppCompatActivity {
         TextView amountTextView = new TextView(this);
         amountTextView.setText(amount);
         amountTextView.setPadding(8, 8, 8, 8);
-
-
-
         row.addView(nutrientTextView);
         row.addView(amountTextView);
-
         tableLayout.addView(row);
     }
 }

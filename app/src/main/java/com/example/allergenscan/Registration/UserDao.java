@@ -10,10 +10,7 @@ import java.util.List;
 public interface UserDao {
     @Insert
     void  insert(UserTable... userTables);
-
-
-
-    @Query("SELECT * FROM users WHERE username=(:username) and password=(:pass)")
-    List<UserTable> login(String username, String pass);
+    @Query("SELECT * FROM users WHERE username = :username AND password = :password")
+    UserTable login(String username, String password);
 
 }
